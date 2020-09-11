@@ -1,7 +1,7 @@
 -- Working
 
 -----------------------------------------------
---- Maevement Luma Hunt v2.6.5 : DC on luma ---
+--- Maevement Luma Hunt : Only Cards On Luma --
 --- Created by MaeBot for TemBot by NhMarco ---
 -----------------------------------------------
 
@@ -28,13 +28,16 @@ if tblua:IsInWorld() == true then
       tblua:CheckLogout()
     while tblua:IsInWorld() == true do
        if Zez == 1 then
-           local sdr = math.random(100)
-           MovementSwitch = sdr
-           tblua:Sleep(sdr)
-        if MovementSwitch < 80 then
+        if MovementSwitch == 1 then
            tblua:CircleArea()
-        elseif MovementSwitch > 79 then
+           local xd = math.random(100, 400)
+           tblua:Sleep(xd)
+           local MovementSwitch = 2
+        elseif MovementSwitch == 2 then
            tblua:RandomArea()
+           local xdd = math.random(600, 1200)
+           tblua:Sleep(xdd)
+           local MovementSwitch = 1
         end
        elseif Zez == 2 then
            tblua:CircleArea()
