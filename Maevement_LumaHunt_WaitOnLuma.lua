@@ -28,18 +28,17 @@ if tblua:IsInWorld() == true then
       tblua:CheckLogout()
     while tblua:IsInWorld() == true do
        if Zez == 1 then
-           local sdr = math.random(2)
-           MovementSwitch = sdr
         if MovementSwitch == 1 then
+           local sdr = math.random(2)
            local xd = math.random(200, 400)
            tblua:CircleArea()
            tblua:Sleep(xd)
-           tblua:CircleArea()
-           tblua:Sleep(xd)
+           MovementSwitch = sdr
         elseif MovementSwitch == 2 then
            local xdd = math.random(300)
            tblua:RandomArea()
            tblua:Sleep(xdd)
+           MovementSwitch = 1
         end
        elseif Zez == 2 then
            tblua:CircleArea()
