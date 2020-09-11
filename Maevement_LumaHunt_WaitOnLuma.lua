@@ -29,6 +29,7 @@ if tblua:IsInWorld() == true then
     while tblua:IsInWorld() == true do
        if Zez == 1 then
         local oof = math.random(8)
+        MovementSwitch = oof
         if MovementSwitch < 8 then
            local xd = math.random(300, 600)
            tblua:CircleArea()
