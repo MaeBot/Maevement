@@ -37,7 +37,6 @@ if tblua:IsInWorld() == true then
            local xdd = math.random(200, 600)
            tblua:RandomArea()
            tblua:Sleep(xdd)
-           MovementSwitch = 1
         end
        elseif Zez == 2 then
            tblua:CircleArea()
