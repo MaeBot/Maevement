@@ -22,7 +22,7 @@ if tblua:IsInWorld() == true then
  while(true)
  do
    if tblua:IsInWorld() == true then
-        local sexy = math.random(200, 600)
+        local sexy = math.random(600)
       tblua:Sleep(sexy)
       tblua:CheckPause()
       tblua:CheckLogout()
