@@ -34,9 +34,9 @@ if tblua:IsInWorld() == true then
            tblua:Sleep(sek)
            MovementSwitch = 2
         elseif MovementSwitch == 2 then
-           local sek = math.random(800)
+           local seke = math.random(800)
            tblua:RandomArea()
-           tblua:Sleep(sek)
+           tblua:Sleep(seke)
            MovementSwitch = 1
         end
        elseif Zez == 2 then
