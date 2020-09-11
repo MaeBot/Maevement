@@ -22,22 +22,22 @@ if tblua:IsInWorld() == true then
  while(true)
  do
    if tblua:IsInWorld() == true then
-        local sexy = math.random(600)
+        local sexy = math.random(200, 600)
       tblua:Sleep(sexy)
       tblua:CheckPause()
       tblua:CheckLogout()
     while tblua:IsInWorld() == true do
        if Zez == 1 then
         if MovementSwitch == 1 then
-           local sek = math.random(800)
            tblua:CircleArea()
-           tblua:Sleep(sek)
-           MovementSwitch = 2
+           local xd = math.random(100, 400)
+           tblua:Sleep(xd)
+           local MovementSwitch = 2
         elseif MovementSwitch == 2 then
-           local seke = math.random(800)
            tblua:RandomArea()
-           tblua:Sleep(seke)
-           MovementSwitch = 1
+           local xdd = math.random(600, 1200)
+           tblua:Sleep(xdd)
+           local MovementSwitch = 1
         end
        elseif Zez == 2 then
            tblua:CircleArea()
