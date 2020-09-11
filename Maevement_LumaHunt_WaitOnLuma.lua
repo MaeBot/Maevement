@@ -30,6 +30,7 @@ if tblua:IsInWorld() == true then
        if Zez == 1 then
         local oof = math.random(100)
         MovementSwitch = oof
+        tblua:Sleep(oof)
         if MovementSwitch < 80 then
            tblua:CircleArea()
         elseif MovementSwitch > 79 then
