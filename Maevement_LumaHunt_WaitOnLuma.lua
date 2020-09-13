@@ -13,8 +13,11 @@ import ('TemBot.Lua.TemBotLua')
 tblua:RegisterTemTemWindow()
 tblua:GetAreaColor()
 
+botname = "VM1"
+
 tblua:Sleep(1000)
 
+encounter = 0
 Zez = 1
 MovementSwitch = 1
 
@@ -55,11 +58,25 @@ if tblua:IsInWorld() == true then
         local Platypet = math.random(50, 150)
         tblua:Sleep(Platypet)
         if tblua:CheckLuma() == true then
-          tblua:SendTelegramMessage("Luma Found! Congratz :D")
-          tblua:TestMessage("Luma Found! Congratz :D")
+          if tblua:GetPixelColor(1045, 100) == "0x1E1E1E" then
+           if tblua:GetPixelColor(777, 65) == "0x1E1E1E" then
+              encounter = encounter + 2
+           else
+              encounter = encounter + 1
+           end
+          end
+          tblua:SendTelegramMessage("Luma Found on " .. tostring(botname) .. " after " .. tostring(encounter) .. " tems encountered !\nCongratulations ! :D")
+          tblua:TestMessage("Luma Found after " .. tostring(encounter) .. " Tems encountered ! Congratulations! :D")
           tblua:PressKey(0x71)
         else
           --Else no Luma, so run away
+          if tblua:GetPixelColor(1045, 100) == "0x1E1E1E" then
+           if tblua:GetPixelColor(777, 65) == "0x1E1E1E" then
+              encounter = encounter + 2
+           else
+              encounter = encounter + 1
+           end
+          end
          while tblua:IsInFight() == true do
           local Marco = tblua:GetSleepTime()
           local Nh = math.random(127, Marco)
