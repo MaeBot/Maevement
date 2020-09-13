@@ -5,6 +5,7 @@
 --- Created by MaeBot for TemBot by NhMarco ---
 -----------------------------------------------
 
+botname = "VM1"
 
 --Importing TemBotLua
 import ('TemBot.Lua.TemBotLua')
@@ -15,6 +16,7 @@ tblua:GetAreaColor()
 
 tblua:Sleep(1000)
 
+encounter = 0
 Zez = 1
 MovementSwitch = 1
 
@@ -55,8 +57,15 @@ if tblua:IsInWorld() == true then
         local Platypet = math.random(50, 150)
         tblua:Sleep(Platypet)
         if tblua:CheckLuma() == true then
-          tblua:SendTelegramMessage("Luma Found! Disconnecting...")
-          local RandomDC = math.random(2048, 3110)
+          if tblua:GetPixelColor(1045, 100) == "0x1E1E1E" then
+           if tblua:GetPixelColor(777, 65) == "0x1E1E1E" then
+              encounter = encounter + 2
+           else
+              encounter = encounter + 1
+           end
+          end
+          tblua:SendTelegramMessage("Luma Found on " .. tostring(botname) .. " after " .. tostring(encounter) .. " tems encountered !\nCongratulations ! :D\nDisconnecting...")
+          local RandomDC = math.random(3048, 4110)
           tblua:Sleep(RandomDC)
           tblua:PressKey(0x1B)
           tblua:Sleep(RandomDC)
@@ -71,6 +80,13 @@ if tblua:IsInWorld() == true then
           tblua:PressKey(0x71)
         else
           --Else no Luma, so run away
+          if tblua:GetPixelColor(1045, 100) == "0x1E1E1E" then
+           if tblua:GetPixelColor(777, 65) == "0x1E1E1E" then
+              encounter = encounter + 2
+           else
+              encounter = encounter + 1
+           end
+          end
          while tblua:IsInFight() == true do
           local Marco = tblua:GetSleepTime()
           local Nh = math.random(127, Marco)
