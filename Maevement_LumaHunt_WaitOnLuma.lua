@@ -5,6 +5,7 @@
 --- Created by MaeBot for TemBot by NhMarco ---
 -----------------------------------------------
 
+botname = "VM1"
 
 --Importing TemBotLua
 import ('TemBot.Lua.TemBotLua')
@@ -12,8 +13,6 @@ import ('TemBot.Lua.TemBotLua')
 --Registering the Temtem Window
 tblua:RegisterTemTemWindow()
 tblua:GetAreaColor()
-
-botname = "VM1"
 
 tblua:Sleep(1000)
 
