@@ -32,7 +32,7 @@ if tblua:IsInWorld() == true then
        if Zez == 1 then
         if MovementSwitch == 1 then
            tblua:CircleArea()
-           local xd = math.random(100, 300)
+           local xd = math.random(300, 400)
            tblua:Sleep(xd)
            local MovementSwitch = math.random(2)
         elseif MovementSwitch == 2 then
