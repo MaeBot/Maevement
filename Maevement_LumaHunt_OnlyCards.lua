@@ -20,7 +20,7 @@ encounter = 0
 Zez = 1
 MovementSwitch = 1
 
-if tblua:IsInWorld() == true then
+if tblua:IsInWorld() == true or tblua:IsInFight() == true then
  while(true)
  do
    if tblua:IsInWorld() == true then
